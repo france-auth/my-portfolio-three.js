@@ -1,4 +1,10 @@
-export const navLinks = [
+type navLinks = {
+  id: number;
+  name: string;
+  href: string
+}
+
+export const navLinks: navLinks[] = [
   {
     id: 1,
     name: 'Home',

@@ -28,6 +28,9 @@ const config: Config = {
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
       },
+      fontFamily: {
+        generalsans: ['"General Sans"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
