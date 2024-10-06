@@ -4,10 +4,10 @@ import Hero from '@/components/Hero';
 
 const App = () => {
   return (
-    <div>
+    <main className='max-w-7xl mx-auto'>
       <Navbar />
       <Hero />
-    </div>
+    </main>
   )
 }
 
