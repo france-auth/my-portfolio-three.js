@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from './ui/Button';
-import { TextGenerateEffect } from './ui/TextGenerateEAffect';
-import { BackgroundLines } from './ui/BackgroundLines';
+import Button from '@/components/ui/Button';
+import { TextGenerateEffect } from '@/components/ui/TextGenerateEAffect';
+import { BackgroundLines } from '@/components/ui/BackgroundLines';
 
 const Hero = () => {
   return (
@@ -27,12 +27,12 @@ const Hero = () => {
         </div>
       </div>
         
-      <div className="absolute bottom-28 sm:bottom-7 left-0 right-0 w-full c-space">
+      <div className="absolute bottom-24 sm:bottom-7 left-0 right-0 w-full c-space">
         <Link href="#contacts" className='w-fit'>
           <Button 
-            name='Let&apos;s work together' 
+            name="Let's work together" 
             isBeam 
-            containerClass='sm:w-fit w-full sm:max-w-[400px]' 
+            containerClass='sm:w-fit w-full sm:min-w-96' 
           />
         </Link>
       </div>

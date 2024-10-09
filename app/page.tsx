@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import Navbar from '@/components/sections/Navbar';
+import Hero from '@/components/sections/Hero';
 
 const App = () => {
   return (

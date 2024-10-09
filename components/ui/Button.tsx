@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({name, isBeam, containerClass}) => {
   return (
-    <div className={`btn $${containerClass}`}>
+    <div className={`btn ${containerClass}`}>
       {isBeam && (
         <span className='relative flex h-3 w-3'>
           <span className='btn-ping' />

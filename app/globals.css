@@ -60,7 +60,7 @@ body {
 
   /* hero section */
   .hero_tag {
-    @apply text-center xl:text-6xl md:text-5xl sm:text-5xl text-4xl font-generalsans font-black !leading-normal;
+    @apply text-center xl:text-6xl md:text-5xl sm:text-5xl text-[42px] font-generalsans font-black sm:!leading-loose;
   }
 
   /* about section */
