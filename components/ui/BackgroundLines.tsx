@@ -17,7 +17,7 @@ export const BackgroundLines = ({
   return (
     <div
       className={cn(
-        "h-[20rem] md:h-screen w-full",
+        "h-screen w-full",
         className
       )}
     >
@@ -97,14 +97,14 @@ const SVG = ({
       xmlns="http://www.w3.org/2000/svg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.8 }}
       className="absolute inset-0 w-full h-full"
     >
       {paths.map((path, idx) => (
         <motion.path
           d={path}
           stroke={colors[idx]}
-          strokeWidth="2.3"
+          strokeWidth="2.5"
           strokeLinecap="round"
           variants={pathVariants}
           initial="initial"

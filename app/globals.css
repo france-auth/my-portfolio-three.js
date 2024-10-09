@@ -42,25 +42,25 @@ body {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
   .text-color_gradient {
-    @apply bg-gradient-to-r from-[#5174d4] from-60% via-[#406ed3] via-60% to-[#356bcf] to-100% bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#5174d4] from-60% via-[#406ed3] via-60% to-[#3c74db] to-100% bg-clip-text text-transparent;
   }
 
   /* button component */
   .btn {
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-lg bg-black-300  transition-all active:scale-95 text-white mx-auto;
   }
 
   .btn-ping {
-    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5174d4] opacity-75;
   }
 
   .btn-ping_dot {
-    @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
+    @apply relative inline-flex rounded-full h-3 w-3 bg-[#406ed3];
   }
 
   /* hero section */
   .hero_tag {
-    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal;
+    @apply text-center xl:text-6xl md:text-5xl sm:text-5xl text-4xl font-generalsans font-black !leading-normal;
   }
 
   /* about section */
