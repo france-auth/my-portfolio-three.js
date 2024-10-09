@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
       </div>
         
-      <div className="absolute bottom-12 sm:bottom-7 left-0 right-0 w-full c-space">
+      <div className="absolute bottom-28 sm:bottom-7 left-0 right-0 w-full c-space">
         <Link href="#contacts" className='w-fit'>
           <Button 
             name='Let&apos;s work together' 
