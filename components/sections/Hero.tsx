@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import { TextGenerateEffect } from '@/components/ui/TextGenerateEAffect';
 import { BackgroundLines } from '@/components/ui/BackgroundLines';
@@ -28,13 +27,13 @@ const Hero = () => {
       </div>
         
       <div className="absolute bottom-24 sm:bottom-7 left-0 right-0 w-full c-space">
-        <Link href="#contacts" className='w-fit'>
           <Button 
-            name="Let's work together" 
+            name="Let's work together"
+            href='#about' 
             isBeam 
             containerClass='sm:w-fit w-full sm:min-w-96' 
+            linkClass='w-fit' 
           />
-        </Link>
       </div>
     </section>
   )

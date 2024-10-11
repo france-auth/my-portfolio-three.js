@@ -1,16 +1,24 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Button from '../ui/Button';
+import { technologies } from '@/data';
 
 const Globe = dynamic(() => import('react-globe.gl'), { ssr: false });
 
 const GlobeComponent = () => {
-  // Ensure this is only executed on the client side
-  if (typeof window === 'undefined') {
-    return null; // Render nothing on the server
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Set the mounted flag to true only on the client side
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    // Don't render the component during server-side rendering
+    return null;
   }
 
   return (
@@ -57,11 +65,27 @@ const About = () => {
         </div>
         <div className='col-span-1 xl:row-span-3'>
           <div className='grid-container'>
-            <Image 
-              src="/assets/grid2.svg" 
-              alt='grid-1' 
-              width={1} height={1}
-              className='w-full sm:h-[276px] h-fit object-contain'/>
+            <div className='flex flex-wrap items-center w-full h-fit lg:h-[276px] object-contain'>
+              <div className='w-full flex flex-wrap justify-center items=center gap-10 p-2 xl:p-0 '>
+              {technologies.map(({id, name, icon}) => (
+                <div key={id} className='flex gap-8 space-y-12'>
+                  <div className='flex flex-col items-center justify-between space-y-1 bg-black-300 p-4 shadow-xl rounded-md  xl:w-20 box-border'>
+                    <Image 
+                      src={icon} 
+                      alt='icon' 
+                      width={1} height={1}
+                      className={` w-16 xl:w-10 xl:h-auto h-fit object-contain 
+                        ${id !== 6 ? 'rounded-lg' : ''}
+                      `} 
+                    />
+                    <p className='text-white text-xs xl:text-[10px] text-center'>
+                      {name}
+                    </p>
+                  </div>
+                </div>
+              ))}
+              </div>
+            </div>
               <div>
                 <p className='grid-headtext'>Tech Stack</p>
                 <p className='grid-subtext'>I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosystems.</p>
@@ -84,6 +108,8 @@ const About = () => {
                 name="Contact Me" 
                 isBeam 
                 containerClass="w-full mt-10"
+                href='#contacts' 
+                linkClass='w-fit' 
               />
             </div>
           </div>
@@ -114,7 +140,7 @@ const About = () => {
               alt='grid-4'
               width={1}
               height={1}
-              className='w-full md:h-[126px] s,:h-[276px] h-fit object-cover sm:object-top'
+              className='w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top'
             />
             <div className='space-y-2'>
               <p className='grid-subtext text-center'>

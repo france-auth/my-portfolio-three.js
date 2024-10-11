@@ -293,3 +293,58 @@ export const workExperiences = [
     animation: 'salute',
   },
 ];
+
+
+import {
+  react,
+  javascript,
+  nextdotjs,
+  /* git, */
+  threedotjs,
+  typescript,
+  tailwindcss
+} from '@/public/assets/index'
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
+export interface techType {
+  id: number
+  name: string;
+  icon: /* React.ForwardRefExoticComponent<Omit<React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, "alt" | "height" | "loading" | "src" | "srcSet" | "width" | "ref">> */ StaticImport
+}
+export const technologies: techType[] = [
+  {
+    id: 1,
+    name: 'React.js',
+    icon: react
+  },
+  {
+    id: 2,
+    name: 'Next.js',
+    icon: nextdotjs
+  },
+  {
+    id: 3,
+    name: 'JavaScript',
+    icon: javascript
+  },
+  {
+    id: 4,
+    name: 'TypeScript',
+    icon: typescript
+  },
+  {
+    id: 5,
+    name: 'Tailwind CSS',
+    icon: tailwindcss
+  },
+  {
+    id: 6,
+    name: 'Three.js',
+    icon: threedotjs
+  },
+  /* {
+    id: 7,
+    name: 'Git',
+    icon: git
+  }, */
+]
